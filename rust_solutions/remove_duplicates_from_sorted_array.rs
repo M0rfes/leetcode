@@ -3,14 +3,14 @@ fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {
         return 0;
     }
 
-    let mut insert_index = 1;
+    let mut writer = 1;
 
-    for i in 1..nums.len() {
-        if nums[i] != nums[insert_index - 1] {
-            nums[insert_index] = nums[i];
-            insert_index += 1;
+    for reader in 1..nums.len() {
+        if nums[reader] != nums[writer - 1] {
+            nums[writer] = nums[reader];
+            writer += 1;
         }
     }
 
-    insert_index as i32
+    writer as i32
 }
