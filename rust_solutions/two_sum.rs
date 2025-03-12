@@ -24,10 +24,6 @@ Output: [0,1]
  */
 use std::collections::HashMap;
 
-fn main() {
-
-}
-
 fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
     let mut seen = HashMap::new();
 
